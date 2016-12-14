@@ -28,6 +28,10 @@ body {
     height: 12em;
 }
 
+.header img {
+    max-height: 100%
+}
+
 .footer {
     background-color: #ece8e5;
 }
@@ -85,4 +89,10 @@ body {
 
 .post-text {
     font-weight: 300;
+}
+
+.parallax-container {
+    height: 12em;
+    width: 100%;
+    background: transparent;
 }

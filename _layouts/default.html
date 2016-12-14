@@ -11,16 +11,17 @@
         <link rel="stylesheet" href="stylesheets/venekamp-blog.css">
     </head>
     <body>
-        <div class="header">
-            <img src="images/simple.jpeg" class="img-fluid" style="max-height: 100%">
-        </div>
+        <!-- <div class="header"> -->
+            <!-- <img src="images/simple.jpeg" class="img-fluid"> -->
+            <div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./images/simple.jpeg" data-natural-width="1080" data-natural-height="210"></div>
+        <!-- </div> -->
+
 
         <div class="container-fluid preliminary" >{{ content }}</div>
-        
+
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <!---<div class="col-sm-8" style="max-width: 42em; float: none; margin: 0 auto;">-->
                     <div class="col-sm-8 posts-column">
                         {% assign i = 0 %}
                         {% for post in site.posts %}
@@ -38,17 +39,21 @@
                         {% endif %}
                         {% endfor %}
                     </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer">
-            <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-            <a href="about/">About</a>
-        </div>
-        <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+            <div class="footer">
+                <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+                <a href="about/">About</a>
+            </div>
+            <!-- jQuery first, then Tether, then Bootstrap JS. -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+            <script src="./javascripts/parallax.min.js"></script>
+            <script>
+$('.parallax-container').parallax();
+            </script>
     </body>
 </html>
