@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheets/venekamp-blog.css">
+    </head>
+    <body>
+        <div class="header">
+            <img src="images/simple.jpeg" class="img-fluid" style="max-height: 100%">
+        </div>
+
+        <div class="container-fluid preliminary" >{{ content }}</div>
+        
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!---<div class="col-sm-8" style="max-width: 42em; float: none; margin: 0 auto;">-->
+                    <div class="col-sm-8 posts-column">
+                        {% assign i = 0 %}
+                        {% for post in site.posts %}
+                        <div class="post-creation">
+                            <span class="post-year">{{ post.date | date: "%Y" }}</span>
+                            <span class="post-date">{{ post.date | date: "%a, %b %d" }}</span>
+                            <span class="post-time">{{ post.date | date: "%H:%M" }}</span>
+                        </div>
+                        <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+                        {% if i < 3 %}
+                        <div class="post-text">{{ post.content }}</div>
+                        {% else if i < 5 %}
+                        <div class="post-text">{{ post.excerpt }}</div>
+                        {% assign i = i | plus: 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+            <a href="about/">About</a>
+        </div>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    </body>
+</html>

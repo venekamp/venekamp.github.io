@@ -1,0 +1,88 @@
+/*
+ * colours:
+ *  - a99b8c
+ *  - 655650
+ *  - d5cec4
+ *  - c7d9e1
+ *  - 878080  (header)
+ *  - ece8e5  (footer)
+ *  - 5b8aa1  (title)
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.header {
+    background-color: #d5cec4;
+    height: 12em;
+}
+
+.footer {
+    background-color: #ece8e5;
+}
+
+.posts-column {
+    max-width: 42em;
+    float: none;
+    margin: 0 auto;
+}
+
+.preliminary {
+    font-size: 1.6em;
+    font-weight: 100;
+    color: #655650;
+    margin: .5em auto 0;
+    padding: 0 2em;
+    text-align: center;
+}
+
+.post-creation {
+    position: relative;
+    top: 4em;
+    left: -8em;
+    width: 7em;
+    text-align: right;
+    border-right: 1px solid #5b8aa1;
+    padding-right: .25em;
+    color: #4e433e;
+}
+
+.post-year {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.post-date {
+    display: block;
+    font-size: .8em;
+    font-weight: 400;
+}
+
+.post-time {
+    display: block;
+    font-weight: 300;
+    font-size: .65em
+}
+
+.post-title {
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #5b8aa1;
+    margin-top: 1em;
+}
+
+.post-text {
+    font-weight: 300;
+}
