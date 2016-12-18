@@ -80,9 +80,8 @@ body {
     font-size: .65em
 }
 
-.post-title {
+h3 .post-title {
     font-weight: 600;
-    font-size: 1.8em;
     color: #5b8aa1;
     margin-top: 1em;
 }
@@ -95,4 +94,26 @@ body {
     height: 12em;
     width: 100%;
     background: transparent;
+}
+
+/*
+#social-links {
+    width: 60px;
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    background-color: #eee;
+}
+*/
+#social-links {
+    width: 60px;
+    position: fixed;
+    bottom: 0px;
+    right: 1em;
+}
+
+
+#social-links img {
+    display: block;
+    margin: 1em auto;
 }
