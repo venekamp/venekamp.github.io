@@ -5,7 +5,7 @@
 
         var element = this.$el;
 
-        var elementHeight = element.height();
+        var elementHeight = element.outerHeight(true);
         var tripPoint = options.tripPoint;
 
         console.log("tripPoint = " + tripPoint + "  elementHeight = " + elementHeight);
@@ -15,8 +15,15 @@
             console.log("elementHeight = " + elementHeight);
         };
 
+        function checkTripValue2() {
+            elementHeight = element.outerHeight(true);
+            checkTripValue();
+        }
+
         function checkTripValue() {
             var currentOffset = window.pageYOffset + window.innerHeight;
+
+            console.log("tripPoint = " + tripPoint + "  elementHeight = " + elementHeight);
 
             if (currentOffset < tripPoint) {
                 setToFixedOnceOnly(0);
@@ -36,7 +43,7 @@
                 "position": "fixed",
                 "top": "",
                 "bottom": "0",
-                "height": elementHeight + "px"
+                //"height": elementHeight + "px"
             }
 
             element.css(cssOptions);
@@ -54,7 +61,7 @@
                 "position": "absolute",
                 "top": offset + "px",
                 "bottom": "",
-                "height": elementHeight + "px"
+                //"height": elementHeight + "px"
             };
 
             element.css(cssOptions);
@@ -62,7 +69,8 @@
         };
 
         this.init = function() {
-            $(document).ready(function() { checkTripValue(); });
+            $(document).ready(function() { checkTripValue2(); });
+            //$(window).on("load", checkTripValue2);
 
             $(window).on("scroll", checkTripValue);
 
