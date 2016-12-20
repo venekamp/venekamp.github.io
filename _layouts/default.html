@@ -35,31 +35,32 @@
                         {% endif %}
                         {% endfor %}
                     </div>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div id="social-links">
-                <a href="https://github.com/venekamp/" target="_blank"><img src="{{ site.url }}/images/GitHub-Mark-32px.png"></a>
-                <a href="https://nl.linkedin.com/in/venekamp" target="_blank"><img src="{{ site.url }}/images/In-Black-34px-R.png"></a>
-            </div>
+        <div id="social-links">
+            <a href="https://github.com/venekamp/" target="_blank"><img src="{{ site.url }}/images/GitHub-Mark-32px.png"></a>
+            <a href="https://nl.linkedin.com/in/venekamp" target="_blank"><img src="{{ site.url }}/images/In-Black-34px-R.png"></a>
+        </div>
 
-            <div class="footer">
-                <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-                <a href="about/">About</a>
-            </div>
-            <!-- jQuery first, then Tether, then Bootstrap JS. -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-            <script src="{{ site.url }}/javascripts/parallax.min.js"></script>
-            <script>
-                $('.parallax-container').parallax();
-            </script>
-            <script src="{{ site.url }}/javascripts/keepabove.js"></script>
+        <div class="footer">
+            <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+            <a href="about/">About</a>
+        </div>
 
-            <script>
-                $("#social-links").keepAboveElement({ "tripPoint": $(".footer").offset().top });
-            </script>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+        <script src="{{ site.url }}/javascripts/parallax.min.js"></script>
+        <script>
+            $('.parallax-container').parallax();
+        </script>
+        <script src="{{ site.url }}/javascripts/keepabove.js"></script>
+
+        <script>
+            $("#social-links").keepAboveElement({ "tripPoint": $(".footer").offset().top });
+        </script>
     </body>
 </html>
