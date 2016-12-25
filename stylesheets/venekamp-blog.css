@@ -8,6 +8,15 @@
  *  - ece8e5  (footer)
  *  - 5b8aa1  (title)
  */
+.lineno {
+    padding-right: .4em;
+    margin-right: .3em;
+    background-color: #f5f3f4;
+}
+
+.about h1 {
+    color: #5b8aa1;
+}
 
 html {
     height: 100%;
@@ -33,6 +42,8 @@ body {
 }
 
 .footer {
+    padding-top1em;
+    min-height: 8em;
     background-color: #ece8e5;
 }
 
@@ -82,8 +93,8 @@ body {
 
 h3 .post-title {
     font-weight: 600;
-    color: #5b8aa1;
     margin-top: 1em;
+    color: #5b8aa1;
 }
 
 .post-text {
@@ -118,4 +129,18 @@ h3 .post-title {
 #social-links img {
     display: block;
     margin: 1em auto;
+}
+
+.about {
+    margin-top 2em;
+    padding-top 2em;
+}
+
+.extra-vspace {
+    margin-top: 3em;
+}
+
+.footer .logo {
+    display: inline-block;
+    margin: .33em 1em;
 }

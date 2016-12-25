@@ -27,10 +27,12 @@ github_username:  venekamp
 # Build settings
 markdown: kramdown
 github: []
-kramdoen:
+kramdown:
     auto_ids: true
     input: GFM
     hard_wrap: false
+    span:
+        line_numbers: true
 
 theme: minima
 gems:
@@ -40,3 +42,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - CNAME
+
+tagline: "A collection of *things* I am **working** on, need to **remember** or find generally **interesting** to share"
+
+author:
+    name: Gerben Venekamp

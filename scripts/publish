@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [[ $# != 2 ]]; then
+    echo "Please speciify a file to date for me, together with the timezone."
+    exit 1;
+fi
+
+POST=$1
+TIMEZONE=$2
+
+if [[ ! -e $POST ]]; then
+    echo "File '$POST' not found."
+    exit 1;
+fi
+
+CUR_DATE=$(date -j '+%Y-%m-%d')
+CUR_TIME=$(date -j '+%T')
+
+OUT_FILE="_posts/$CUR_DATE-$(basename $POST)"
+echo $OUT_FILE
+
+cat $POST | sed -e "s/^date: .*$/date: $CUR_DATE $CUR_TIME $TIMEZONE/" > $OUT_FILE
+
+rm "_drafts/$(basename $POST)"
