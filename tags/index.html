@@ -19,13 +19,13 @@ title: Tags
 {% assign tags = site.tags | sort %}
             <ul style="list-style-type: none; padding-left: 0">
 {% for tag in tags %}
-<li><i class="fa fa-tag" style="color: orange"></i>{{ tag[0] }} <span style="color: #d00; font-size: .71em; font-weight: 300">({{tag[1] | size}})<span></li>
+<li><i class="fa fa-tag" style="color: orange"></i><a href="#{{ tag[0] }}-link">{{ tag[0] }} </a><span style="color: #d00; font-size: .71em; font-weight: 300">({{tag[1] | size}})<span></li>
 {% endfor %}
             </ul>
         </div>
         <div class="col-sm-6">
 {% for tag in tags %}
-            <h1 style="clear: both;">{{ tag | first }}</h1>
+            <h1 id="{{ tag | first }}-link" style="clear: both;">{{ tag | first }}</h1>
             <ul style="list-style-type: none; padding-left: 0">
 {% for post in dateSortedPosts %}
 {% for t in post.tags %}
