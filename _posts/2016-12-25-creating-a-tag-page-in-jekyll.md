@@ -156,6 +156,12 @@ which we are creating the post overview (line 23). If a match is found
 the post.title and post.date are displayed inside a list item (lines 24
 -- 27).
 
+### Adding links
+The above example lacks clickable links from the listed tags
+(lines 8 -- 15) to the tags section generated in the second half. The
+omission is because of keeping the example simple. The reader can add
+the necessary code to the example to achieve the desired behaviour.
+
 ## There is a plugin for that!
 One could use a plugin that does it all for you. Or, one could even
 write your one plugin to get the best possible experience. Well, the
