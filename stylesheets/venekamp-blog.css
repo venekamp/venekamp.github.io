@@ -118,15 +118,6 @@ body {
     background: transparent;
 }
 
-/*
-#social-links {
-    width: 60px;
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    background-color: #eee;
-}
-*/
 #social-links {
     display: block;
     width: 60px;
