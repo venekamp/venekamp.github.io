@@ -2,7 +2,7 @@
 layout: post
 title: Creating a tag page in Jekyll
 date: 2016-12-25 14:33:31 +0100
-tags: jekyll
+tags: jekyll liquid
 ---
 
 Writing a blog post is one thing, finding them back is another. These
