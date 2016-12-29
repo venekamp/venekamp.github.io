@@ -32,12 +32,13 @@
                             <h1><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></h1>
                             <div style="font-size: 0.85em; margin-bottom: 1em">
                                 <span><i class="fa fa-tags"></i></span>
-                                <ul style="display: inline-block; color: #aaa; font-weight: 300; list-style-type: none; padding: 0; margin: 0">
+                                <ul style="display: inline; color: #aaa; font-weight: 300; list-style-type: none; padding: 0; margin: 0">
                                     {% for tag in post.tags %}
-                                    {% if tag == "jekyll" %}
-                                    <li><a href="{{ site.url }}/tags/index.html#{{ tag }}-link">{{ tag }}</a></li>
+                                    {% assign last = post.tags | last %}
+                                    {% if tag == last %}
+                                    <li style="display: inline-block"><a href="{{ site.url }}/tags/index.html#{{ tag }}-link">{{ tag }}</a></li>
                                     {% else %}
-                                    <li><a href="{{ site.url }}/tags/index.html#{{ tag }}-link">{{ tag }}, </a></li>
+                                    <li style="display: inline-block"><a href="{{ site.url }}/tags/index.html#{{ tag }}-link">{{ tag }}, </a></li>
                                     {% endif %}
                                     {% endfor %}
                                 </ul>
