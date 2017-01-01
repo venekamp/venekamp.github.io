@@ -165,7 +165,7 @@ the necessary code to the example to achieve the desired behaviour.
 ## There is a plugin for that!
 One could use a plugin that does it all for you. Or, one could even
 write your one plugin to get the best possible experience. Well, the
-latter might nog work for you. Depending where you publish your site,
+latter might not work for you. Depending where you publish your site,
 restrictions on execution of plugins might apply. Especially when you
 develop your own plugins. GitHub does not allow you to bring your own
 plugins for example. By using the Liquid templating you keep control
