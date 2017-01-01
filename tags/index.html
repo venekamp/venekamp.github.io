@@ -23,7 +23,7 @@ title: Tags
 {% for post in dateSortedPosts %}
 {% for t in post.tags %}
 {% if t == tag[0] %}
-<li><span class="tag-post-title">{{ post.title }}<span class="tag-post-date">{{ post.date | date: "%b %-d,%Y" }}</span></span></li>
+<li><a class="tag-post-title" href="{{ post.url }}">{{ post.title }}</a><span class="tag-post-date">{{ post.date | date: "%b %-d,%Y" }}</span></span></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
