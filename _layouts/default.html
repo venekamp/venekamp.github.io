@@ -2,8 +2,10 @@
 <html lang="en">
     {% include head.html %}
     <body>
+        {% include header.html image="simple.jpeg" width="1080" height="210" %}
+<!--
         <div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="{{ site.url }}/images/simple.jpeg" data-natural-width="1080" data-natural-height="210"></div>
-
+        -->
         <div class="container-fluid preliminary" >{{ content }}</div>
 
         <div class="content">
@@ -20,7 +22,10 @@
                             </div>
                             <h1><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></h1>
                             <div style="font-size: 0.85em; margin-bottom: 1em">
+                                {% assign num_of_posts = post.tags | size %}
+                                {% if num_of_posts > 0 %}
                                 <span><i class="fa fa-tags"></i></span>
+                                {% endif %}
                                 <ul style="display: inline; color: #aaa; font-weight: 300; list-style-type: none; padding: 0; margin: 0">
                                     {% for tag in post.tags %}
                                     {% assign last = post.tags | last %}
@@ -50,25 +55,10 @@
             <a href="https://nl.linkedin.com/in/venekamp" target="_blank"><img src="{{ site.url }}/images/In-Black-34px-R.png"></a>
         </div>
 
-        <div class="footer">
-            <div class="container-fluid" style="text-align: center;">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-                    </div>
-                    <div class="col-sm-6">
-                        <a href="about/">About</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-        <script src="{{ site.url }}/javascripts/parallax.min.js"></script>
-        <script>
-            $('.parallax-container').parallax();
-        </script>
+        {% include footer.html %}
+        {% include jquery %}
+        {% include bootstrap %}
+        {% include paralax %}
         <script src="{{ site.url }}/javascripts/keepabove.js"></script>
 
         <script>
