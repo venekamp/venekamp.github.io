@@ -63,6 +63,10 @@ body {
     text-align: center;
 }
 
+.post {
+    margin-bottom: 1.5rem;
+}
+
 .post-body {
     font-weight: 300;
 }
@@ -111,6 +115,30 @@ body {
     font-weight: 600;
     margin-top: 1em;
     color: #5b8aa1;
+}
+
+.post .link-to-post {
+    width: 50%;
+    display: block;
+    font-weight: 300;
+}
+
+.post .link-previous {
+    text-align: left;
+    float: left;
+}
+
+.post .link-next {
+    text-align: right;
+    float: right;
+}
+
+.link-previous .extra-space {
+    margin-right: .5em;
+}
+
+.link-next .extra-space {
+    margin-left: .5em;
 }
 
 .parallax-container {

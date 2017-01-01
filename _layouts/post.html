@@ -2,6 +2,32 @@
 <html lang="en">
     {% include head.html %}
     <body>
-        {{ content }}
+        {% include header.html image="simple.jpeg" width="1080" height="210" %}
+        <div class="content">
+            <div class="container-fluid post">
+                <div class="row">
+                    <div class="col-sm-8 posts-column">
+                        <h1>{{ page.title }}</h1>
+                        {{ content }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-10">
+                        {% if page.previous.url %}
+                        <a class="link-to-post link-previous" href="{{ page.previous.url }}"><i class="fa fa-chevron-circle-left extra-space" aria-hidden="true"></i>{{ page.previous.title }}</a>
+                        {% endif %}
+                        {% if page.next.url %}
+                        <a class="link-to-post link-next" href="{{ page.next.url }}">{{ page.next.title }} <i class="fa fa-chevron-circle-right extra-space" aria-hidden="true"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+        {% include jquery %}
+        {% include bootstrap %}
+        {% include paralax %}
     </body>
 </html>
