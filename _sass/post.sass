@@ -1,0 +1,63 @@
+@import site-colors
+
+.posts-column
+  max-width: 42em
+  float: none
+  margin: 0 auto
+
+.post
+  margin-top: 1rem
+  margin-bottom: 1.5rem
+
+.post-title
+  font-weight: 600
+  font-size: 1.8rem
+  color: $post-title-color
+
+.post
+  .post-title
+    @extend .post-title
+    margin-top: 5rem
+
+.post
+  h1
+    a
+      @extend .post-title
+
+.post-body
+  font-weight: 300
+
+.post-body
+  h2
+    font-weight: 400
+    font-size: 2rem
+
+.post-body
+  h3
+    font-weight: 400
+    font-size:  1.6rem
+
+.post-creation
+  position: relative
+  top: 4.5rem
+  left: -8rem
+  width: 7rem
+  text-align: right
+  border-right: 1px solid $grey-blue
+  padding-right: .25rem
+  color: $warm-grey-darker
+
+.post-year
+  display: block
+  font-weight: 100
+  font-size: 1.2rem
+
+.post-date
+  display: block
+  font-weight: 400
+  font-size: .8rem
+
+.post-time
+  display: block
+  font-weight: 300
+  font-size: .65rem
