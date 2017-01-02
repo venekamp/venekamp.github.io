@@ -4,7 +4,13 @@
     <body>
         {% include header.html image="simple.jpeg" width="1080" height="210" %}
 
-        <div class="container-fluid preliminary" >{{ content }}</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 preliminary">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
 
         <div class="content">
             <div class="container-fluid">
