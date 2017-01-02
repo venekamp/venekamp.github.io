@@ -37,6 +37,7 @@ kramdown:
 gems:
   - jekyll-archives
   - jekyll-feed
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
