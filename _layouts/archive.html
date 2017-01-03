@@ -2,17 +2,27 @@
 <html lang="en">
     {% include head.html %}
     <body>
-        {% include header.html image="simple.jpeg" width="1080" height="210" %}
-        <h1>Posts from {{ page.date | date: "%Y" }}</h1>
+		{% include header.html image="simple.jpeg" width="1080" height="210" %}
 
-        <ul class="content">
-            {% for post in page.posts %}
-            <li>
-                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+		<div class="content-fluid content" style="margin-top: 4rem;">
+			<div class="row">
+				<div class-"col-sm-12">
+					<i class="fa fa-archive fa-3x" aria-hidden="true"></i>	
+				</div>
+			</div>
+		</div>
+
+		<div class="content-fluid content">
+			<div class="row">
+				<div class-"col-sm-12">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+
         {% include footer.html %}
+        {% include jquery %}
+        {% include bootstrap %}
+        {% include parallax %}
     </body>
 </html>

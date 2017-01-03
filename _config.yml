@@ -50,7 +50,7 @@ permalink: /:year/:month/:title/
 jekyll-archives:
     enabled:
         - year
-    layout: archive
+    layout: archive-year
     permalinks:
         year: /:year/
 
@@ -63,3 +63,5 @@ timezone: Europe/Amsterdam
 
 sass:
     style: compressed
+
+emptyArray: []
