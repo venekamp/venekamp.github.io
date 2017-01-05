@@ -10,7 +10,7 @@ title: Archives
 {% endfor %}
 
 <ul>
-{% assign years = years | sort | uniq %}
+{% assign years = years | reversed | uniq %}
 {% for year in years %}
 <li><a href="{{ site.url }}/{{ year }}"><i class="fa fa-archive" aria-hidden="true"></i>{{ year }}</a>
 {% endfor %}
