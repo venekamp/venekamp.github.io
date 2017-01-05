@@ -35,7 +35,7 @@ kramdown:
         line_numbers: true
 
 gems:
-  - jekyll-archives
+    #  - jekyll-archives
   - jekyll-feed
   - jekyll-sitemap
 
@@ -47,12 +47,12 @@ exclude:
 
 permalink: /:year/:month/:title/
 
-jekyll-archives:
-    enabled:
-        - year
-    layout: archive-year
-    permalinks:
-        year: /:year/
+#jekyll-archives:
+#    enabled:
+#        - year
+#    layout: archive-year
+#    permalinks:
+#        year: /:year/
 
 tagline: "A collection of *things* I am **working** on, need to **remember** or find generally **interesting** to share"
 
