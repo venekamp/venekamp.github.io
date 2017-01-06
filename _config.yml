@@ -44,6 +44,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - CNAME
+  - LICENSE.txt
 
 permalink: /:year/:month/:title/
 
