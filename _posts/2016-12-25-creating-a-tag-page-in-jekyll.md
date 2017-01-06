@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Creating a tag page in Jekyll
+title: Creating a Tag Page in Jekyll
 date: 2016-12-25 14:33:31 +0100
-tags: jekyll liquid
+tags: Jekyll Liquid
 ---
-
+# Finding back a post
 Writing a blog post is one thing, finding them back is another. These
 blog posts are not just about telling wonderful stories, but also a
 place where I put things I have learned. As you can imagine, I would
@@ -35,7 +35,7 @@ content and page description.
 With the above in mind, I will explain how to create a
 [tags]({{ site.url }}/tags/) page within Jekyll.
 
-## Putting it all together
+# Putting it all together
 I have a preference for clean URLs. Strictly speaking this is no
 requirement to get the tags page working. It is just my preference. I
 would like my tags page to have to following URL: `{{ site.url }}/tags/`.
@@ -156,13 +156,13 @@ which we are creating the post overview (line 23). If a match is found
 the post.title and post.date are displayed inside a list item (lines 24
 -- 27).
 
-### Adding links
+## Adding links
 The above example lacks clickable links from the listed tags
 (lines 8 -- 15) to the tags section generated in the second half. The
 omission is because of keeping the example simple. The reader can add
 the necessary code to the example to achieve the desired behaviour.
 
-## There is a plugin for that!
+# There is a plugin for that!
 One could use a plugin that does it all for you. Or, one could even
 write your one plugin to get the best possible experience. Well, the
 latter might not work for you. Depending where you publish your site,
@@ -171,7 +171,7 @@ develop your own plugins. GitHub does not allow you to bring your own
 plugins for example. By using the Liquid templating you keep control
 close to yourself.
 
-## Final thoughts
+# Final thoughts
 The above shows how you can create a tags page of your own. The examples
 are nicely formatted for readability. However, the html output contains
 a lot of white space. This is due to the way Liquid works. Each time a
