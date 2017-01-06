@@ -1,12 +1,14 @@
 #!/bin/bash
 
-if [[ $# != 2 ]]; then
-    echo "Please speciify a file to date for me, together with the timezone."
+set -e
+
+if [[ $# != 1 ]]; then
+    echo "Please speciify a file to publish for me."
     exit 1;
 fi
 
 POST=$1
-TIMEZONE=$2
+TIMEZONE=$(date -j '+%z')
 
 if [[ ! -e $POST ]]; then
     echo "File '$POST' not found."
