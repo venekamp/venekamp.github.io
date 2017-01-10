@@ -74,6 +74,7 @@ of years to come. Let's say until 2050. I think my bloggng days will be
 over by then. This is achieved by adding directories and placing an
 `index.html` in each of them.
 
+<div class="blog-figure">
 {% highlight bash linenos %}
 mkdir 2017
 
@@ -93,6 +94,13 @@ git commit -m 'Adding archive pages 2017-2050'
 git push
 
 {% endhighlight %}
+<span class="blog-figure-caption">
+  <span class="blog-figure-number">Figure 1:</span>
+  <span class="blog-figure-text">
+    Listing of steps for generating the archive pages for years 2017&ndash;2050.
+  </span>
+</span>
+</div>
 
 Lines 3--8 fill the `index.html` with the appropriate content. It is
 necessary to specify the layout file and optionally a title. The
@@ -109,6 +117,7 @@ collecting all the posts belonging to a particular year. Below is the
 Liquid code that does just that. The layout file also contains a bit of
 `html` to display the posts.
 
+<div class="blog-figure" id="fig2">
 {% highlight html linenos %}
 {% raw %}
 <html lang="en">
@@ -139,6 +148,13 @@ Liquid code that does just that. The layout file also contains a bit of
 </html>
 {% endraw %}
 {% endhighlight %}
+<span class="blog-figure-caption">
+  <span class="blog-figure-number">Figure 2:</span>
+  <span class="blog-figure-text">
+    Liquide code for generating an archive page for a particular year.
+  </span>
+</span>
+</div>
 
 The `{% raw %}{% include head.html %}{% endraw %}` on the second line is
 there to create a valid `<head>` section. The important part is on
@@ -163,4 +179,4 @@ for yourself.
 You'll end up with a considerable amount of directories at the root
 level. If this bothers you, you could add the directories to `archive`
 instead, or any other location you wish. You will need to change line 5
-in the section code example to adjust to the new location.
+in the code example in [Figure 2](#fig2) to adjust to the new location.
