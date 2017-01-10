@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating an Archive with Jekyll and GitHub
-date: 2017-01-06 16:51:38 +0100
+date: 2017-01-06 17:51:38 +0100
 tags:
     - Jekyll
     - GitHub
@@ -158,3 +158,9 @@ empty array as there is no way to initialize an array in Liquid. Lines
 valid html page containing the posts of 2017, which works nicely with
 GitHub pages. You can see the [results]({{ site.url }}{{ site.baseurl }}/2017)
 for yourself.
+
+# Final Thoughts
+You'll end up with a considerable amount of directories at the root
+level. If this bothers you, you could add the directories to `archive`
+instead, or any other location you wish. You will need to change line 5
+in the section code example to adjust to the new location.
