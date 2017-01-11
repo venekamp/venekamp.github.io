@@ -18,9 +18,10 @@ fi
 CUR_DATE=$(date -j '+%Y-%m-%d')
 CUR_TIME=$(date -j '+%T')
 
-OUT_FILE="_posts/$CUR_DATE-$(basename $POST)"
-echo $OUT_FILE
+PUBLISHED_POST="_posts/$CUR_DATE-$(basename $POST)"
+echo $PUBLISHED_POST
 
-cat $POST | sed -e "s/^date: .*$/date: $CUR_DATE $CUR_TIME $TIMEZONE/" > $OUT_FILE
+cat $POST | sed -e "/title:.*/a \\
+    date: $CUR_DATE $CUR_TIME $TIMEZONE" > $PUBLISHED_POST
 
 rm "_drafts/$(basename $POST)"
