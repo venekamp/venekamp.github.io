@@ -52,7 +52,6 @@ The page that defines the layout of the tags page is placed in the
 `_layout/` directory. Let's call this `tags-page.html`. Now let us
 define a minimal html page for it. That would look like this:
 
-<div class="blog-figure">
 {% highlight html linenos %}
 <!DOCTYPE html>
 <html lang="en">
@@ -71,12 +70,11 @@ define a minimal html page for it. That would look like this:
     </body>
 </html>
 {% endhighlight %}
-<span class="blog-figure-caption">
-<span class="blog-figure-number">Figure 1:</span>
-<span class="blog-figure-text">
-  Example of a minimal layout page that generates a valid HTML document.
-</span>
-</span>
+<div class="figure-caption">
+  <span class="label">Figure 1:</span>
+  <span class="text">
+    Example of a minimal layout page that generates a valid HTML document.
+  </span>
 </div>
 As can be seen it is void of any markup or other structure of an html
 page. Two things should be noticed. There are two places where Liquid is
@@ -95,7 +93,6 @@ code.
 Most of the work is done in the `index.html` part. Its content is as
 follows:
 
-<div class="blog-figure">
 {% highlight markdown linenos %}
 ---
 layout: tags-page
@@ -131,12 +128,11 @@ title: Tags
     {{ "{% endfor " }}%}
 </div>
 {% endhighlight %}
-<span class="blog-figure-caption">
-<span class="blog-figure-number">Figure 2:</span>
-<span class="blog-figure-text">
-  Liquid code for generating a tags page. 
-</span>
-</span>
+<div class="figure-caption">
+  <span class="label">Figure 2:</span>
+  <span class="text">
+    Liquid code for generating a tags page. 
+  </span>
 </div>
 
 Let's take a closer look at the contents of `index.html`. Like the
