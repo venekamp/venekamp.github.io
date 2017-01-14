@@ -9,9 +9,9 @@ title: Archives
 {% assign years = years| push: year %}
 {% endfor %}
 
-<ul>
+<ul class="archive">
 {% assign years = years | reversed | uniq %}
 {% for year in years %}
-<li><a href="{{ site.url }}/{{ year }}"><i class="fa fa-archive" aria-hidden="true"></i>{{ year }}</a>
+<li><a href="{{ site.url }}/{{ year }}">{{ year }}</a>
 {% endfor %}
 </ul>
