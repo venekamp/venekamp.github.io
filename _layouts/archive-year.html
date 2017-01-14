@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h1>Posts from {{ pageYear }}</h1>
-                    <ul class="content archive-year">
+                    <ul class="archive-year">
                         {% for post in posts %}
                         <li>
                             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -31,5 +31,8 @@
         </div>
 
         {% include footer.html %}
+        {% include jquery %}
+        {% include bootstrap %}
+        {% include parallax %}
     </body>
 </html>
