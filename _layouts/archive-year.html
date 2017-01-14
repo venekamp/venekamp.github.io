@@ -14,15 +14,22 @@
         {% endif %}
         {% endfor %}
 
-        <h1>Posts from {{ pageYear }}</h1>
-        <ul class="content">
-            {% for post in posts %}
-            <li>
-                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+        <div class="container-fluid content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Posts from {{ pageYear }}</h1>
+                    <ul class="content archive-year">
+                        {% for post in posts %}
+                        <li>
+                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         {% include footer.html %}
     </body>
 </html>
