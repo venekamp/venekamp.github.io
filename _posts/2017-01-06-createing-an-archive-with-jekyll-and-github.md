@@ -115,7 +115,7 @@ collecting all the posts belonging to a particular year. Below is the
 Liquid code that does just that. The layout file also contains a bit of
 `html` to display the posts.
 
-<div id="fig2">
+<div id="fig2"></div>
 {% highlight html linenos %}
 {% raw %}
 <html lang="en">
