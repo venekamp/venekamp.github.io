@@ -15,7 +15,6 @@ title: blog.venekamp.eu
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-8 posts-column">
-                {% assign i = 0 %}
                 {% for post in site.posts %}
                 <div class="post">
                     <div class="post-creation">
@@ -40,11 +39,8 @@ title: blog.venekamp.eu
                             {% endfor %}
                         </ul>
                     </div>
-                    {% if i < 3 %}
-                        <div class="post-body">{{ post.content }}</div>
-                    {% else if i < 5 %}
+                    {% if forloop.index0 < 5 %}
                         <div class="post-body">{{ post.excerpt }}</div>
-                    {% assign i = i | plus: 1 %}
                     {% endif %}
                 </div>
                 {% endfor %}
