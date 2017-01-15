@@ -21,7 +21,7 @@
                     <ul class="archive-year">
                         {% for post in posts %}
                         <li>
-                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                            <span class="post-date">{{ post.date | date: "%b %-d" }}</span>
                             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                         </li>
                         {% endfor %}
